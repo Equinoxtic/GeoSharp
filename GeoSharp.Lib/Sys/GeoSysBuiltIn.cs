@@ -8,26 +8,26 @@ using static GeoSharp.Lib.Sys.GeoSys;
 namespace GeoSharp.Lib.Sys {
 	internal class GeoSysBuiltIn {
 		public static void clearScreen() {
-			if (isOperatingSystem("Windows")) {
-				executeCommand("cls");
+			if (IsOperatingSystem("Windows")) {
+				ExecuteCommand("cls");
 			} else {
-				executeCommand("clear");
+				ExecuteCommand("clear");
 			}
  		}
 
 		public static void systemPause() {
-			if (isOperatingSystem("Windows")) {
-				executeCommand("pause");
+			if (IsOperatingSystem("Windows")) {
+				ExecuteCommand("pause");
 			} else {
-				executeCommand("read");
+				ExecuteCommand("read");
 			}
 		}
 
 		public static void systemPauseExit() {
-			if (isOperatingSystem("Windows")) {
-				executeCommand("pause");
+			if (IsOperatingSystem("Windows")) {
+				ExecuteCommand("pause");
 			} else {
-				executeCommand("read");
+				ExecuteCommand("read");
 			}
 			System.Environment.Exit(0);
 		}

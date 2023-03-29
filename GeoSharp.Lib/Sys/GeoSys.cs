@@ -12,12 +12,12 @@ namespace GeoSharp.Lib.Sys {
 		[DllImport("msvcrt.dll")]
 		public static extern int system(string format);
 
-		public static void executeCommand(string command, string args = "") {
+		public static void ExecuteCommand(string command, string args = "") {
 			string s = command + args;
 			system(s.ToString());
 		}
 
-		private static string getOperatingSystem() {
+		private static string GetOperatingSystem() {
 			string os = "";
 			if (Environment.OSVersion.Platform == PlatformID.Win32NT) {
 				os = "Windows";
@@ -29,8 +29,8 @@ namespace GeoSharp.Lib.Sys {
 			return os;
 		}
 
-		public static bool isOperatingSystem(string os) {
-			return (getOperatingSystem() == os);
+		public static bool IsOperatingSystem(string os) {
+			return (GetOperatingSystem() == os);
 		}
 	}
 }
