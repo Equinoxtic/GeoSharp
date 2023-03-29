@@ -6,28 +6,28 @@ using static GeoSharp.Lib.StringUtils;
 
 namespace GeoSharp.Lib {
 	public static class TimeLib {
-		public static string getDate() {
+		public static string GetDate() {
 			return DateTime.Now.ToString("dd-MM-yyyy");
 		}
 
-		public static string getTime() {
+		public static string GetTime() {
 			return DateTime.Now.ToString("HH:mm:ss");
 		}
 
-		public static string getShortTime() {
+		public static string GetShortTime() {
 			return DateTime.Now.ToString("HH:mm");
 		}
 
-		public static string getTimeType(string timeType) {
+		public static string GetTimeType(string timeType) {
 			string s = "";
-			if (!stringEmpty(timeType)) {
+			if (!StringEmpty(timeType)) {
 				switch(timeType) {
-					case "date": s = getDate(); break;
-					case "time": s = getTime(); break;
-					case "short-time": s = getShortTime(); break;
-					case "date-and-time": s = String.Format("{0} - {1}", getDate(), getTime()); break;
-					case "date-and-short-time": s = String.Format("{0} - {1}", getDate(), getShortTime()); break;
-					default: s = getDate(); break;
+					case "date": s = GetDate(); break;
+					case "time": s = GetTime(); break;
+					case "short-time": s = GetShortTime(); break;
+					case "date-and-time": s = String.Format("{0} - {1}", GetDate(), GetTime()); break;
+					case "date-and-short-time": s = String.Format("{0} - {1}", GetDate(), GetShortTime()); break;
+					default: s = GetDate(); break;
 				}
 			}
 			return s.ToString();

@@ -20,7 +20,7 @@ namespace GeoSharp.FS {
 
 		public static void clearFile(string path) {
 			if (!File.Exists(path)) {
-				throw new FileNotFoundException("File: " + quoteString(path) + ", does not exist!");
+				throw new FileNotFoundException("File: " + QuoteString(path) + ", does not exist!");
 			} else {
 				overwriteFile(path, "");
 			}
