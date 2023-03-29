@@ -19,12 +19,12 @@ namespace GeoSharp.Logging {
 				} else {
 					s = CreateConsoleMessage(defaultMessageHeader, messageString, true);
 				}
-				writeToFile(logFile, s);
+				WriteToFile(logFile, s);
 			}
 		}
 
 		public void ClearLogFile(string path) {
-			clearFile(path);
+			ClearFile(path);
 		}
 	}
 }

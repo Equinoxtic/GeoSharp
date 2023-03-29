@@ -8,21 +8,23 @@ using static GeoSharp.Lib.StringUtils;
 
 namespace GeoSharp.FS {
 	public static class GeoFileUtils {
-		public static string getCWD() {
+		public static string GetCWD() {
 			return Directory.GetCurrentDirectory() + "/";
 		}
 
-		public static string getFile(string path) {
-			string s = "";
-			s = getCWD() + path;
-			return s;
+		public static string GetFile(string path) {
+			return String.Format("{0}{1}", GetCWD(), path).ToString();
 		}
 
-		public static void clearFile(string path) {
+		public static string GetFileAndExt(string path, string ext) {
+			return String.Format("{0}{1}.{2}", GetCWD(), path, ext).ToString();
+		}
+
+		public static void ClearFile(string path) {
 			if (!File.Exists(path)) {
 				throw new FileNotFoundException("File: " + QuoteString(path) + ", does not exist!");
 			} else {
-				overwriteFile(path, "");
+				OverwriteFile(path, "");
 			}
 		}
 	}

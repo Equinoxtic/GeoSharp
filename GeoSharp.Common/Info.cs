@@ -11,7 +11,7 @@ namespace GeoSharp.Common {
 		public static string versionTag = "0.1";
 
 		public static string GetVersion() {
-			return readFile(versionFile);
+			return ReadFile(versionFile);
 		}
 
 		public static string GetVersionTag() {
