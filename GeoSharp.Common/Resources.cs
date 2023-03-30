@@ -8,7 +8,7 @@ using static GeoSharp.FS.GeoFileUtils;
 namespace GeoSharp.Common {
 	public static class Resources {
 		public static string logFile = "";
-		public static string getLogFile() {
+		public static string GetLogFile() {
 			return logFile;
 		}
 	}

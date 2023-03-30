@@ -5,13 +5,13 @@ using System.Collections.Generic;
 
 namespace GeoSharp.Lib {
 	public static class ArrayUtils {
-		public static void pushStringArray(string[] stringArray) {
+		public static void PushStringArray(string[] stringArray) {
 			for (int i = 0; i < stringArray.Length; ++i) {
 				Console.Write(stringArray[i]);
 			}
 		}
 
-		public static string returnStringFromStringArray(string[] stringArray) {
+		public static string ReturnStringFromStringArray(string[] stringArray) {
 			var s = new StringBuilder();
 			for (int i = 0; i < stringArray.Length; ++i) {
 				s.Append(stringArray[i].ToString());
@@ -19,7 +19,7 @@ namespace GeoSharp.Lib {
 			return s.ToString();
 		}
 
-		public static void setStringFromStringArray(string[] stringArray, string t_string) {
+		public static void SetStringFromStringArray(string[] stringArray, string t_string) {
 			var s = new StringBuilder();
 			for (int i = 0; i < stringArray.Length; ++i) {
 				s.Append(stringArray[i].ToString());
@@ -27,7 +27,7 @@ namespace GeoSharp.Lib {
 			t_string = s.ToString();
 		}
 
-		public static void pushIntArray(int[] intArray) {
+		public static void PushIntArray(int[] intArray) {
 			for (int i = 0; i < intArray.Length; ++i) {
 				Console.Write(intArray[i]);
 			}

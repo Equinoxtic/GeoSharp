@@ -7,20 +7,20 @@ using static GeoSharp.Lib.TimeLib;
 
 namespace GeoSharp.Logging {
 	internal class ConsoleMessage {
-		public static string createConsoleMessage(string headerString, string messageString, bool quoted) {
+		public static string CreateConsoleMessage(string headerString, string messageString, bool quoted) {
 			string s = "";
 			s = String.Format("{0}: {1}",
-				surroundString(headerString, "[", "]"),
-				((quoted) ? quoteString(messageString) : messageString));
+				SurroundString(headerString, "[", "]"),
+				((quoted) ? QuoteString(messageString) : messageString));
 			return s.ToString();
 		}
 
-		public static string createTimedConsoleMessage(string headerString, string messageString, bool quoted) {
+		public static string CreateTimedConsoleMessage(string headerString, string messageString, bool quoted) {
 			string s = "";
-			string cs = String.Format("{0} @ {1}", headerString, getTime());
+			string cs = String.Format("{0} @ {1}", headerString, GetTime());
 			s = String.Format("{0}: {1}",
-				surroundString(cs, "[", "]"),
-				((quoted) ? quoteString(messageString) : messageString));
+				SurroundString(cs, "[", "]"),
+				((quoted) ? QuoteString(messageString) : messageString));
 			return s.ToString();
 		}
 	}

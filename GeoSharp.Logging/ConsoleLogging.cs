@@ -10,21 +10,21 @@ using static GeoSharp.FS.GeoFileUtils;
 
 namespace GeoSharp.Logging {
 	internal class ConsoleLogging {
-		public void logMessage(string messageString, string logFile, bool hasTime = true) {
+		public void LogMessage(string messageString, string logFile, bool hasTime = true) {
 			string defaultMessageHeader = "CONSOLE";
 			string s = "";
-			if (!stringEmpty(messageString)) {
+			if (!StringEmpty(messageString)) {
 				if (hasTime) {
-					s = createTimedConsoleMessage(defaultMessageHeader, messageString, true);
+					s = CreateTimedConsoleMessage(defaultMessageHeader, messageString, true);
 				} else {
-					s = createConsoleMessage(defaultMessageHeader, messageString, true);
+					s = CreateConsoleMessage(defaultMessageHeader, messageString, true);
 				}
-				writeToFile(logFile, s);
+				WriteToFile(logFile, s);
 			}
 		}
 
-		public void clearLogFile(string path) {
-			clearFile(path);
+		public void ClearLogFile(string path) {
+			ClearFile(path);
 		}
 	}
 }

@@ -5,13 +5,13 @@ using System.Collections.Generic;
 
 namespace GeoSharp.Lib {
 	public static class ListUtils {
-		public static void pushStringList(List<string> stringList) {
+		public static void PushStringList(List<string> stringList) {
 			for (int i = 0; i < stringList.Count; ++i) {
 				Console.Write(stringList[i]);
 			}
 		}
 
-		public static string returnStringFromStringList(List<string> stringList) {
+		public static string ReturnStringFromStringList(List<string> stringList) {
 			var s = new StringBuilder();
 			for (int i = 0; i < stringList.Count; ++i) {
 				s.Append(stringList[i].ToString());
@@ -19,7 +19,7 @@ namespace GeoSharp.Lib {
 			return s.ToString();
 		}
 
-		public static void setStringFromStringList(List<string> stringList, string t_string) {
+		public static void SetStringFromStringList(List<string> stringList, string t_string) {
 			var s = new StringBuilder();
 			for (int i = 0; i < stringList.Count; ++i) {
 				s.Append(stringList[i].ToString());
@@ -27,7 +27,7 @@ namespace GeoSharp.Lib {
 			t_string = s.ToString();
 		}
 
-		public static void pushIntList(List<int> intList) {
+		public static void PushIntList(List<int> intList) {
 			for (int i = 0; i < intList.Count; ++i) {
 				Console.Write(intList[i]);
 			}

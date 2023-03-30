@@ -7,14 +7,14 @@ using static GeoSharp.FS.GeoFileUtils;
 
 namespace GeoSharp.Common {
 	public static class Info {
-		public static string versionFile = "version.txt";
+		public static string versionFile = "";
 		public static string versionTag = "0.1";
 
-		public static string getVersion() {
-			return readFile(versionFile);
+		public static string GetVersion() {
+			return ReadFile(versionFile);
 		}
 
-		public static string getVersionTag() {
+		public static string GetVersionTag() {
 			return versionTag;
 		}
 	}
