@@ -3,7 +3,6 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 
 namespace GeoSharp.GStd.GSio {
 	public static class GStdio {
