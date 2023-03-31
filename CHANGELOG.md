@@ -6,41 +6,51 @@
 
 * An update focused on bug fixes and a new `HTTPS` library.
 
-Latest changes ([#2](https://github.com/Equinoxtic/GeoSharp/pull/2/commits/b0538eb88c5750dc27022b615e878682558d32a6))
+Latest changes ([#]())
 
 ---
 
 ## New Features
 
-* New `HTTPS` library for handling links.
-	+ `Link.cs` (`GeoSharp.Https.Link`)
-	+ `Browser.cs` (`GeoSharp.Https.Browser`)
-* `Link` - Is used for creating and opening links.
-* `Browser` - Is used for getting information on links on certain hard-coded websites. (Built ontop of `Link`)
+* New "Standard" library. (`GeoSharp.GStd`)
+* New "Standard Input and Output" (`GeoSharp.GStd.GSio.GStdio`)
+* Updated "Console" library for local logging and outputting console messages. (`GeoSharp.GStd.GeoConsole`)
 
 ## Updates & Bug fixes
 
-* Update Method names for all files.
-* Updated Method: `GetFile()` for `GeoFile`:
+* Remove `GeoSharp.Common` and it's files.
+* Remove `GeoSharp.Logging` and it's files. (Is now replaced with `GeoSharp.GStd.GeoConsole`)
+* New functions for `Lib.Conversions`
+	+ `IntBool()` - Returns **true** if ``x >= 1`` or ``x < 0``, otherwise return false if ``x == 0``
+	+ `BoolInt()` - Inverse type of `IntBool()`, returns **1** if `true` and **0** if false.
+* Updated Method anmes and how certain Methods function for Built-In System Commands.
 
 ```cs
-// ===== Old Code =====
-public static string getFile(string path) {
-	string s = "";
-	s = getCWD() + path;
-	return s;
+// ========== Old Code ==========
+public static void systemPause() {
+	if (IsOperatingSystem("Windows")) {
+		system("pause");
+	} else {
+		system("read");
+	}
 }
 
-// ===== New Code =====
-public static string GetFileAndExt(string path, string ext) {
-	return String.Format("{0}{1}.{2}", GetCWD(), path, ext).ToString();
+public static void systemPauseExit() {
+	if (IsOperatingSystem("Windows")) {
+		system("pause");
+	} else {
+		system("read");
+	}
+	System.Environment.Exit(0);
 }
-```
 
-* New Method: `GetFileAndExt()` for `GeoFile`:
+// ========== New Code ==========
+public static void SystemPause() {
+	Console.ReadKey();
+}
 
-```cs
-public static string GetFileAndExt(string path, string ext) {
-	return String.Format("{0}{1}.{2}", GetCWD(), path, ext).ToString();
+public static void SystemPauseExit() {
+	Console.ReadKey();
+	System.Environment.Exit(0);
 }
 ```
