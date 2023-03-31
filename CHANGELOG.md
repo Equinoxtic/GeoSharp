@@ -1,12 +1,12 @@
 # GeoSharp Changelog
 
-## Version (0.25)
+## Version (0.32)
 
 ---
 
-* An update focused on bug fixes and a new `HTTPS` library.
+* A QoL focused update, regarding some bug fixes and some minor updates.
 
-Latest changes ([#]())
+Latest changes ([#4](https://github.com/Equinoxtic/GeoSharp/pull/4))
 
 ---
 
