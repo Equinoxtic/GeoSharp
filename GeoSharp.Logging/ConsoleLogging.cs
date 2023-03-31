@@ -2,7 +2,6 @@ using System;
 using System.Linq;
 using System.Text;
 using System.Collections.Generic;
-using static GeoSharp.Common.Resources;
 using static GeoSharp.Logging.ConsoleMessage;
 using static GeoSharp.Lib.StringUtils;
 using static GeoSharp.FS.GeoFile;
