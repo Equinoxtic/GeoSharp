@@ -7,7 +7,7 @@ using static GeoSharp.Lib.Sys.GeoSys;
 
 namespace GeoSharp.Lib.Sys {
 	internal class GeoSysBuiltIn {
-		public static void clearScreen() {
+		public static void ClearScreen() {
 			if (IsOperatingSystem("Windows")) {
 				ExecuteCommand("cls");
 			} else {
@@ -15,24 +15,16 @@ namespace GeoSharp.Lib.Sys {
 			}
  		}
 
-		public static void systemPause() {
-			if (IsOperatingSystem("Windows")) {
-				ExecuteCommand("pause");
-			} else {
-				ExecuteCommand("read");
-			}
+		public static void SystemPause() {
+			Console.ReadKey();
 		}
 
-		public static void systemPauseExit() {
-			if (IsOperatingSystem("Windows")) {
-				ExecuteCommand("pause");
-			} else {
-				ExecuteCommand("read");
-			}
+		public static void SystemPauseExit() {
+			Console.ReadKey();
 			System.Environment.Exit(0);
 		}
 
-		public static void systemExit() {
+		public static void SystemExit() {
 			System.Environment.Exit(0);
 		}
 	}
